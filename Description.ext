@@ -1,0 +1,12 @@
+#include "R3F_LOG\desc_include.h" 
+
+Author="SFC N. Heintz and CPT M. Coxit";
+OnLoadMission = "Get your loadout and Wait for instructions";
+LoadScreen = "USASOC_Banner.jpg";
+
+
+respawn = "BASE";
+
+respawnDelay = 5;
+respawnOnStart = 0;
+respawnTemplates[] = {"MenuPosition"};
