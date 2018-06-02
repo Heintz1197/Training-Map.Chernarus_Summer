@@ -1,19 +1,19 @@
 /* 
-this is run from an addAction on an object or RangeMaster2's init field:
+this is run from an addAction on an object or RangeMaster5's init field:
 
-this addAction["Start Range", {_this execVM "scripts\Range2.sqf"}, [], 0, true, false];
+this addAction["Start Range", {_this execVM "scripts\Range5.sqf"}, [], 0, true, false];
 
 */
 
 // Function declared in your init.sqf or Functions library
-	params["_object",	"_caller", "_id","_args", ["_targetsHit", 0]]; // Grab params from default addAction input and declare _targetsHit to 0
+	params["_object", "_caller", "_id","_args", ["_targetsHit", 0]]; // Grab params from default addAction input and declare _targetsHit to 0
 
 	// create tablets in a tower away from the ranges equal to the number of ranges
 	_args params [    // Optional arguments for setting # targets, skill level, rangemaster speaker and targets array.
 		["_maxtarg", 40],
 		["_skill", 3],
-		["_rangeMaster", rangeMaster2],
-		["_targets", [pt2,pt2_1, pt2_2, pt2_3, pt2_4, pt2_5, pt2_6, pt2_7, pt2_8, pt2_9]]
+		["_rangeMaster", rangeMaster5],
+		["_targets", [pt5,pt5_1, pt5_2, pt5_3, pt5_4, pt5_5, pt5_6, pt5_7, pt5_8, pt5_9]]
 	];
 
 	{_x  animate["terc",1]} forEach _targets; //puts the targets down before the start
@@ -22,9 +22,9 @@ this addAction["Start Range", {_this execVM "scripts\Range2.sqf"}, [], 0, true, 
 	nopop=true; // sets them to stay down until triggered to popup
 
 	
-	"Setting up Range 2" remoteExec ["hint", _caller]; // Range setup hints to player who called the action.
+	"Setting up Range 5" remoteExec ["hint", _caller]; // Range setup hints to player who called the action.
 	sleep 2;
-	"Get Ready Range 2..." remoteExec ["hint", _caller];
+	"Get Ready Range 5..." remoteExec ["hint", _caller];
 	sleep 2;
 	"" remoteExec ["hint", _caller];
 
@@ -54,7 +54,7 @@ this addAction["Start Range", {_this execVM "scripts\Range2.sqf"}, [], 0, true, 
 	};
 
 	
-	"Session 2 Complete" remoteExec ["hint", _caller]; // We're out of targets, so let the shooter know.
+	"Session 5 Complete" remoteExec ["hint", _caller]; // We're out of targets, so let the shooter know.
 
 	
 	{_x  animate["terc",0]} forEach _targets; // Put all the targets up again.
@@ -63,9 +63,9 @@ this addAction["Start Range", {_this execVM "scripts\Range2.sqf"}, [], 0, true, 
 	sleep 2; // Rangemaster is tallying your score...
 
 	// replace 0 with _caller if only the shooter should see.
-	format["Range 2 Targets :%1 Hit :%2",_maxtarg,_targetsHit] remoteExec ["hint", _caller]; 
+	format["Range 5 Targets :%1 Hit :%2",_maxtarg,_targetsHit] remoteExec ["hint", _caller]; 
 	
 	sleep 5;
 	
-	// Clear the "Course 2 Complete" hint.
+	// Clear the "Course 5 Complete" hint.
 	"" remoteExec ["hint", _caller];

@@ -1,24 +1,14 @@
 /* 
-Assuming this is run from an addAction on an object or RangeMaster2's init field:
+this is run from an addAction on an object or RangeMaster1's init field:
 
-Defaults:
+this addAction["Start Range", {_this execVM "scripts\Range1.sqf"}, [], 0, true, false];
 
-this setVariable["heinz_range1_inUse", false];
-this addAction["Start Range", {_this call heinz_fnc_range1}, [], 0, true, false, "", "!(_target getVariable 'heinz_range1_inUse')"];
-
- or  customized...
-
-this setVariable["heinz_range2_inUse", false];
- this addAction["Start Range Zombies", {_this call heinz_fnc_range2}, [40, 3, rangeMaster1, [ptz, ptz_1, ptz_2, ptz_3, ptz_4], 0, true, false, "", "!(_target getVariable 'heinz_range2_inUse')"];
- 
 */
 
 // Function declared in your init.sqf or Functions library
-heinz_fnc_range1 = {
-	
 	params["_object",	"_caller", "_id","_args", ["_targetsHit", 0]]; // Grab params from default addAction input and declare _targetsHit to 0
 
-	
+	// create tablets in a tower away from the ranges equal to the number of ranges
 	_args params [    // Optional arguments for setting # targets, skill level, rangemaster speaker and targets array.
 		["_maxtarg", 40],
 		["_skill", 3],
@@ -26,19 +16,15 @@ heinz_fnc_range1 = {
 		["_targets", [pt1,pt1_1, pt1_2, pt1_3, pt1_4, pt1_5, pt1_6, pt1_7, pt1_8, pt1_9]]
 	];
 
-	
-	_rangeMaster setVariable["heinz_range1_inUse", true, true]; //Sets the range to in use
-	
-
 	{_x  animate["terc",1]} forEach _targets; //puts the targets down before the start
 
-	
+ 
 	nopop=true; // sets them to stay down until triggered to popup
 
 	
-	"Setting up the Range" remoteExec ["hint", _caller]; // Range setup hints to player who called the action.
+	"Setting up Range 1" remoteExec ["hint", _caller]; // Range setup hints to player who called the action.
 	sleep 2;
-	"Get Ready..." remoteExec ["hint", _caller];
+	"Get Ready Range 1..." remoteExec ["hint", _caller];
 	sleep 2;
 	"" remoteExec ["hint", _caller];
 
@@ -68,7 +54,7 @@ heinz_fnc_range1 = {
 	};
 
 	
-	"Session Complete" remoteExec ["hint", _caller]; // We're out of targets, so let the shooter know.
+	"Session 1 Complete" remoteExec ["hint", _caller]; // We're out of targets, so let the shooter know.
 
 	
 	{_x  animate["terc",0]} forEach _targets; // Put all the targets up again.
@@ -77,11 +63,9 @@ heinz_fnc_range1 = {
 	sleep 2; // Rangemaster is tallying your score...
 
 	// replace 0 with _caller if only the shooter should see.
-	[_rangeMaster, format["Range 1 Targets :%1 Hit :%2",_maxtarg,_targetsHit]] remoteExec ["sideChat", 0];  
+	format["Range 1 Targets :%1 Hit :%2",_maxtarg,_targetsHit] remoteExec ["hint", _caller]; 
 	
-	// Open for business again!
-	_rangeMaster setVariable["heinz_range1_inUse", false, true];
+	sleep 5;
 	
-	// Clear the "Course Complete" hint.
+	// Clear the "Course 1 Complete" hint.
 	"" remoteExec ["hint", _caller];
-};
