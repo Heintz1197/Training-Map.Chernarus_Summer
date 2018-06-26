@@ -26,7 +26,7 @@ for "_i" from 1 to 2 do {_this addItemToBackpack "ACE_EarPlugs";};
 _this addItemToBackpack "ACE_Flashlight_XL50";
 for "_i" from 1 to 5 do {_this addItemToBackpack "ACE_packingBandage";};
 for "_i" from 1 to 4 do {_this addItemToBackpack "ACE_tourniquet";};
-__this addItemToBackpack "ACE_salineIV_250";
+_this addItemToBackpack "ACE_salineIV_250";
 _this addItemToBackpack "ACE_SpraypaintBlack";
 _this addItemToBackpack "ACE_SpraypaintGreen";
 _this addItemToBackpack "ACE_SpraypaintRed";

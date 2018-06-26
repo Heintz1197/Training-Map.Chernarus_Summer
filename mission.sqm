@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5105.2793,498.6077,9356.7861};
-		dir[]={-0.44435719,-0.58526528,0.67824441};
-		up[]={-0.3207368,0.8108421,0.48955625};
-		aside[]={0.83646905,-4.1909516e-008,0.54801935};
+		pos[]={4482.0439,359.98965,10746.297};
+		dir[]={0.50983822,-0.48051167,0.71356517};
+		up[]={0.2793453,0.87698829,0.39097017};
+		aside[]={0.81365383,7.7736331e-007,-0.58135104};
 	};
 };
 binarizationWanted=0;
@@ -2684,7 +2684,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="60";
+							value="30";
 						};
 					};
 				};
@@ -2703,7 +2703,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="1";
+							value="0";
 						};
 					};
 				};
@@ -18105,7 +18105,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="call{[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal; this addAction[""<t color='#ff9900'>Teleport to Rifle Range</t>"", {player setPos getMarkerPos(""teleport3"")}]; this addAction[""<t color='#ff9900'>Teleport to Jet Hangers</t>"", {player setPos getMarkerPos(""teleport4"")}]; this addAction[""<t color='#ff9900'>Teleport to CQB Range</t>"", {player setPos getMarkerPos(""teleport5"")}];}";
+						init="call{this addAction[""<t color='#ff9900'>Teleport to Rifle Range</t>"", {player setPos getMarkerPos(""teleport3"")}]; this addAction[""<t color='#ff9900'>Teleport to Jet Hangers</t>"", {player setPos getMarkerPos(""teleport4"")}]; this addAction[""<t color='#ff9900'>Teleport to CQB Range</t>"", {player setPos getMarkerPos(""teleport5"")}]; this addAction[""Take AR"", 'player execVM ""Loadouts\AR.sqf""']; this addAction[""Take Rifleman"", 'player execVM ""Loadouts\Rifleman.sqf""']; this addAction[""Take AAR"", 'player execVM ""Loadouts\AAR.sqf""']; this addAction[""Take Fireteam Lead"", 'player execVM ""Loadouts\FTL.sqf""']; this addAction[""Take Squad Lead"", 'player execVM ""Loadouts\SL.sqf""']; this addAction[""Take Corpsman"", 'player execVM ""Loadouts\HM.sqf""']; this addAction[""Take Platoon CO"", 'player execVM ""Loadouts\Platoon.sqf""']; this addAction[""Take RTO"", 'player execVM ""Loadouts\RTO.sqf""'];}";
 						disableSimulation=1;
 					};
 					id=1965;
@@ -29519,7 +29519,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4545.043,341.21478,10795.396};
-				angles[]={-0,2.5998898,0};
+				angles[]={0,2.5998898,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29535,7 +29535,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4548.4106,341.21478,10797.42};
-				angles[]={-0,2.5998898,0};
+				angles[]={0,2.5998898,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29551,7 +29551,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4551.9619,341.21478,10799.19};
-				angles[]={-0,2.5998898,0};
+				angles[]={0,2.5998898,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29567,7 +29567,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4544.3271,340.24731,10806.107};
-				angles[]={-0,5.7794509,0};
+				angles[]={0,5.7794509,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29583,7 +29583,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4540.3125,340.24725,10803.966};
-				angles[]={-0,5.7996082,0};
+				angles[]={0,5.7996082,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29592,6 +29592,7 @@ class Mission
 			};
 			id=2546;
 			type="rhsusf_M977A4_REPAIR_BKIT_usarmy_wd";
+			atlOffset=-6.1035156e-005;
 		};
 		class Item859
 		{
@@ -29608,6 +29609,7 @@ class Mission
 			};
 			id=2547;
 			type="rhsusf_M977A4_AMMO_BKIT_usarmy_wd";
+			atlOffset=-6.1035156e-005;
 		};
 		class Item860
 		{
@@ -29615,7 +29617,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4551.0063,341.02911,10785.035};
-				angles[]={-0,5.7500248,0};
+				angles[]={0,5.7500248,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29631,7 +29633,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4554.3857,341.02911,10787.038};
-				angles[]={-0,5.7500248,0};
+				angles[]={0,5.7500248,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29647,7 +29649,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4558.186,341.02911,10789.128};
-				angles[]={-0,5.7500248,0};
+				angles[]={0,5.7500248,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29740,7 +29742,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4444.8779,341.18716,10735.367};
-				angles[]={-0,1.0321105,0};
+				angles[]={0,1.0321105,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29756,7 +29758,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4434.269,341.18716,10756.01};
-				angles[]={-0,1.0321105,0};
+				angles[]={0,1.0321105,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29772,7 +29774,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4475.6392,339.11359,10680.149};
-				angles[]={-0,1.0327883,0};
+				angles[]={0,1.0327883,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29849,7 +29851,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4424.0718,340.94888,10775.503};
-				angles[]={-0,1.090119,0};
+				angles[]={0,1.090119,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29865,7 +29867,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4412.9404,340.94888,10793.901};
-				angles[]={-0,1.1220582,0};
+				angles[]={0,1.1220582,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29881,7 +29883,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4397.481,342.5885,10817.784};
-				angles[]={-0,1.0700426,0};
+				angles[]={0,1.0700426,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29897,7 +29899,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4551.3413,341.71365,10775.766};
-				angles[]={-0,2.5439017,0};
+				angles[]={0,2.5439017,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29913,7 +29915,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4547.1812,341.71365,10773.138};
-				angles[]={-0,2.5439017,0};
+				angles[]={0,2.5439017,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29945,7 +29947,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4536.0752,341.47968,10766.022};
-				angles[]={-0,2.5551672,0};
+				angles[]={0,2.5551672,0};
 			};
 			side="Empty";
 			flags=4;
@@ -29961,7 +29963,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4379.4175,342.5885,10847.259};
-				angles[]={-0,1.0700426,0};
+				angles[]={0,1.0700426,0};
 			};
 			side="Empty";
 			flags=4;
