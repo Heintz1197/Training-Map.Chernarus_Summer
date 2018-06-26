@@ -1,4 +1,4 @@
-comment "Exported from Arsenal by SSgt N. Heintz";
+comment "Exported from Arsenal by CW2 N. Heintz";
 
 comment "Remove existing items";
 removeAllWeapons _this;
@@ -11,14 +11,14 @@ removeHeadgear _this;
 removeGoggles _this;
 
 comment "Add containers";
-_this forceAddUniform "rhs_uniform_FROG01_wd";
+_this forceAddUniform "VTN_U_FROG_WDL";
 _this addVest "rhsusf_spc_teamleader";
-for "_i" from 1 to 6 do {_this addItemToVest "rhs_mag_M433_HEDP";};
 for "_i" from 1 to 2 do {_this addItemToVest "rhs_mag_m714_White";};
-for "_i" from 1 to 2 do {_this addItemToVest "rhs_mag_m715_Green";};
 for "_i" from 1 to 2 do {_this addItemToVest "rhs_mag_m713_Red";};
-for "_i" from 1 to 10 do {_this addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
-_this addBackpack "B_Kitbag_rgr";
+for "_i" from 1 to 2 do {_this addItemToVest "rhs_mag_m715_Green";};
+for "_i" from 1 to 6 do {_this addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
+for "_i" from 1 to 6 do {_this addItemToVest "rhs_mag_M441_HE";};
+_this addBackpack "VTN_ILBE";
 for "_i" from 1 to 3 do {_this addItemToBackpack "ACE_tourniquet";};
 _this addItemToBackpack "ACE_salineIV_250";
 _this addItemToBackpack "ACE_SpraypaintRed";
@@ -32,21 +32,25 @@ _this addItemToBackpack "ACE_SpraypaintBlue";
 for "_i" from 1 to 3 do {_this addItemToBackpack "ACE_CableTie";};
 _this addItemToBackpack "ACE_EarPlugs";
 _this addItemToBackpack "ACE_EntrenchingTool";
-_this addItemToBackpack "SmokeShellRed";
-_this addItemToBackpack "SmokeShellPurple";
+_this addItemToBackpack "ACE_HuntIR_monitor";
+for "_i" from 1 to 2 do {_this addItemToBackpack "SmokeShellRed";};
 for "_i" from 1 to 2 do {_this addItemToBackpack "rhs_mag_m67";};
 for "_i" from 1 to 2 do {_this addItemToBackpack "ACE_M84";};
 _this addItemToBackpack "Chemlight_blue";
 _this addItemToBackpack "Chemlight_green";
 _this addItemToBackpack "ACE_Chemlight_HiRed";
+for "_i" from 1 to 2 do {_this addItemToBackpack "rhs_200rnd_556x45_M_SAW";};
 _this addItemToBackpack "SmokeShellGreen";
 _this addItemToBackpack "SmokeShellOrange";
 for "_i" from 1 to 4 do {_this addItemToBackpack "rhs_mag_an_m8hc";};
+for "_i" from 1 to 4 do {_this addItemToBackpack "rhs_mag_30Rnd_556x45_M855_Stanag";};
 _this addHeadgear "rhsusf_lwh_helmet_marpatwd";
+_this addGoggles "rhs_googles_clear";
 
 comment "Add weapons";
 _this addWeapon "rhs_weap_m16a4_carryhandle_M203";
 _this addPrimaryWeaponItem "rhsusf_acc_SF3P556";
+_this addPrimaryWeaponItem "rhsusf_acc_ACOG_USMC_3d";
 _this addWeapon "Binocular";
 
 comment "Add items";
