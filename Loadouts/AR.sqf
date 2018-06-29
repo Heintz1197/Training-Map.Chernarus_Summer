@@ -11,7 +11,7 @@ removeHeadgear _this;
 removeGoggles _this;
 
 comment "Add containers";
-_this forceAddUniform "VTN_U_FROG_WDL";
+_this forceAddUniform "rhs_uniform_FROG01_wd";
 _this addVest "rhsusf_spc_iar";
 for "_i" from 1 to 16 do {_this addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Red";};
 _this addBackpack "B_Kitbag_rgr";

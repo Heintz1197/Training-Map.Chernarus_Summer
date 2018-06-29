@@ -9,7 +9,7 @@ removeHeadgear _this;
 removeGoggles _this;
 
 comment "Add containers";
-_this forceAddUniform "VTN_U_FROG_WDL";
+_this forceAddUniform "rhs_uniform_FROG01_wd";
 _this addVest "rhsusf_spc_rifleman";
 for "_i" from 1 to 2 do {_this addItemToVest "rhs_mag_an_m8hc";};
 _this addItemToVest "Chemlight_blue";

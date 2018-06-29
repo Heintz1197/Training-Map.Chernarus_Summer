@@ -11,7 +11,7 @@ removeHeadgear _this;
 removeGoggles _this;
 
 comment "Add containers";
-_this forceAddUniform "VTN_U_FROG_WDL";
+__this forceAddUniform "rhs_uniform_FROG01_wd";
 _this addVest "rhsusf_spc_teamleader";
 for "_i" from 1 to 2 do {_this addItemToVest "rhs_mag_m714_White";};
 for "_i" from 1 to 2 do {_this addItemToVest "rhs_mag_m713_Red";};

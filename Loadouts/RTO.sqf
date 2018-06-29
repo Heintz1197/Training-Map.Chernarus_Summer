@@ -1,4 +1,4 @@
-comment "Exported from Arsenal by CW2 N. Heintz";
+comment "Exported from Arsenal by Sgt N. Heintz";
 
 comment "Remove existing items";
 removeAllWeapons _this;
@@ -11,9 +11,9 @@ removeHeadgear _this;
 removeGoggles _this;
 
 comment "Add containers";
-_this forceAddUniform "VTN_U_FROG_WDL";
+_this forceAddUniform "rhs_uniform_FROG01_wd";
 _this addVest "rhsusf_spc_patchless_radio";
-for "_i" from 1 to 10 do {_this addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
+for "_i" from 1 to 9 do {_this addItemToVest "rhs_mag_30Rnd_556x45_M855_Stanag";};
 for "_i" from 1 to 3 do {_this addItemToVest "rhs_mag_an_m8hc";};
 for "_i" from 1 to 2 do {_this addItemToVest "rhs_mag_m67";};
 _this addBackpack "tfw_ilbe_wd";
@@ -56,5 +56,3 @@ _this linkItem "ItemCompass";
 _this linkItem "ItemWatch";
 _this linkItem "tf_anprc152_14";
 _this linkItem "ItemcTab";
-
- 
