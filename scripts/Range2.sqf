@@ -140,7 +140,7 @@ sleep 1;
 for [{_i=1},{_i<=10},{_i=_i+1}] do { //loop the target at 200 meters for first target group
 		
 		
-		_currentTarget = _targets select 1; // Select a random target from the _targets pool
+		_currentTarget = _targets select 0; // Select a random target from the _targets pool
 		
 		_currentTarget animate["terc", 0]; // and pop it up
 		sleep 0.5;

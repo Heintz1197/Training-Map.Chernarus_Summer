@@ -1,8 +1,8 @@
 #include "R3F_LOG\desc_include.h" 
 
-Author="CW2 N. Heintz and CPT M. Coxit";
+Author="Sgt N. Heintz";
 OnLoadMission = "Get your loadout and Wait for instructions";
-LoadScreen = "USASOC_Banner.jpg";
+LoadScreen = "MarineBanner.jpg";
 
 
 respawn = "BASE";
