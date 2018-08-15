@@ -1,0 +1,53 @@
+comment "Exported from Arsenal by SSgt N. Heintz";
+
+comment "Remove existing items";
+removeAllWeapons _this;
+removeAllItems _this;
+removeAllAssignedItems _this;
+removeUniform _this;
+removeVest _this;
+removeBackpack _this;
+removeHeadgear _this;
+removeGoggles _this;
+
+comment "Add containers";
+_this forceAddUniform "rhs_uniform_FROG01_wd";
+_this addItemToUniform "ACE_MapTools";
+_this addItemToUniform "ACE_Flashlight_XL50";
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_EarPlugs";};
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_Chemlight_HiRed";};
+for "_i" from 1 to 2 do {_this addItemToUniform "ACE_Chemlight_HiWhite";};
+_this addVest "rhsusf_spc_corpsman";
+for "_i" from 1 to 2 do {_this addItemToVest "ACE_CableTie";};
+for "_i" from 1 to 10 do {_this addItemToVest "rhs_mag_30Rnd_556x45_M855A1_Stanag";};
+for "_i" from 1 to 2 do {_this addItemToVest "rhs_mag_an_m8hc";};
+_this addBackpack "fatpack_coy";
+for "_i" from 1 to 4 do {_this addItemToBackpack "ACE_salineIV";};
+for "_i" from 1 to 6 do {_this addItemToBackpack "ACE_salineIV_250";};
+for "_i" from 1 to 6 do {_this addItemToBackpack "ACE_salineIV_500";};
+for "_i" from 1 to 25 do {_this addItemToBackpack "ACE_tourniquet";};
+for "_i" from 1 to 18 do {t_this addItemToBackpack "ACE_morphine";};
+_this addItemToBackpack "ACE_EntrenchingTool";
+for "_i" from 1 to 12 do {_this addItemToBackpack "ACE_epinephrine";};
+for "_i" from 1 to 20 do {_this addItemToBackpack "ACE_fieldDressing";};
+for "_i" from 1 to 45 do {_this addItemToBackpack "ACE_elasticBandage";};
+for "_i" from 1 to 30 do {_this addItemToBackpack "ACE_quikclot";};
+_this addItemToBackpack "ACE_personalAidKit";
+for "_i" from 1 to 3 do {_this addItemToBackpack "ACE_IR_Strobe_Item";};
+_this addItemToBackpack "ACE_surgicalKit";
+for "_i" from 1 to 2 do {_this addItemToBackpack "rhs_mag_m18_red";};
+_this addItemToBackpack "rhs_mag_m18_green";
+_this addItemToBackpack "rhs_mag_an_m8hc";
+_this addHeadgear "rhsusf_lwh_helmet_marpatwd";
+
+comment "Add weapons";
+_this addWeapon "rhs_weap_m16a4_carryhandle";
+_this addPrimaryWeaponItem "rhsusf_acc_SF3P556";
+_this addWeapon "Binocular";
+
+comment "Add items";
+_this linkItem "ItemMap";
+_this linkItem "ItemCompass";
+_this linkItem "ItemWatch";
+_this linkItem "tf_anprc152_1";
+_this linkItem "rhsusf_ANPVS_15";
